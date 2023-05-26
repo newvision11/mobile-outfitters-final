@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Outfitters Senegal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <script src="https://kit.fontawesome.com/6b5a69a0c3.js" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEP6nM8t44xj4AlHkJOV0Y0B0dMsZOMg8"></script>
+    <link rel="stylesheet" type="text/css" href="path/to/your/stylesheet.css">
+    <script src="path/to/your/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    $('.scroll-top').fadeIn();
+                } else {
+                    $('.scroll-top').fadeOut();
+                }
+            });
+            $('.scroll-top').click(function () {
+                $('html, body').animate({ scrollTop: 0 }, 800);
+                return false;
+            });
+        });
+        $('.scroll-top').click(function () {
+            $('html, body').animate({ scrollTop: 0 }, 800);
+            return false;
+        });
+    </script>
+
+</head>
+
+<body onload="myFunction()">
+
+    <script>
+
+        jQuery(function ($) {
+            // Asynchronously Load the map API 
+            var script = document.createElement('script');
+            script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBZib4Lvp0g1L8eskVBFJ0SEbnENB6cJ-g&callback=initialize";
+            document.body.appendChild(script);
+        });
+
+        function initialize() {
+            var map;
+            var bounds = new google.maps.LatLngBounds();
+            var mapOptions = {
+                mapTypeId: 'roadmap'
+            };
+
+            // Display a map on the page
+            map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+            map.setTilt(45);
+
+            // Multiple Markers
+            var markers = [
+                ['Auchan Mermoze', 14.693801727747177, -17.47445079815249],
+                ['Sea Plazza', 14.686194293713555, -17.453816919511905],
+                ['Sea Plazza', 14.713033764994819, -17.476966732470295],
+                ['Sea Plazza', 14.74156217338199, -17.511615868755786],
+                ['Sea Plazza', 14.671248703184332, -17.06743333068287],
+            ];
+
+            // Display multiple markers on a map
+            var infoWindow = new google.maps.InfoWindow({ maxWidth: 280 }),
+                marker, i;
+
+            // Loop through our array of markers & place each one on the map  
+            for (i = 0; i < markers.length; i++) {
+                var image = 'img/map-logo-02-01.png';
+                var position = new google.maps.LatLng(markers[i][1],
+                    markers[i][2], markers[i][3], markers[i][4]);
+                bounds.extend(position);
+                marker = new google.maps.Marker({
+                    position: position,
+                    map: map,
+                    icon: image,
+
+                });
+
+                // Allow each marker to have an info window    
+                google.maps.event.addListener(marker, 'mouseover', (function (marker, i) {
+                    return function () {
+                        infoWindow.setContent(infoWindowContent[i][0]);
+                        infoWindow.open(map, marker);
+                    }
+                })(marker, i));
+
+                // Automatically center the map fitting all markers on the screen
+                map.fitBounds(bounds);
+            }
+
+            // Override our map zoom level once our fitBounds function runs (Make sure it only runs once)
+            var tilesloadedListener = google.maps.event.addListener((map), 'tilesloaded', function (event) {
+                this.setZoom(11);
+                google.maps.event.removeListener(tilesloadedListener);
+            });
+
+        }
+
+    </script>
+
+    <header>
+        <!--Navbar start-->
+        <div class="navbar">
+
+            <!-- Navbar logo -->
+            <div class="nav-header">
+                <div class="nav-logo">
+                    <a href="Index.html">
+                        <img src="img/logo-white-08.png" width="100px" alt="logo">
+                    </a>
+                </div>
+            </div>
+
+            <!-- responsive navbar toggle button -->
+            <input type="checkbox" id="nav-check">
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+
+            <!-- Navbar items -->
+            <div class="nav-links">
+                <!-- Dropdown menu -->
+
+                <div class="dropdown">
+                    <a class="dropBtn" style="cursor: pointer;">Nos Produits
+                        <i class="fas fa-angle-down"></i>
+                    </a>
+                    <div class="drop-content">
+                        <a href="original-matte.html">Protection Anti-Choc</a>
+                        <a href="fusion.html">Protection Anti-Rayures</a>
+                        <a href="style-skins.html">Personnalisation</a>
+
+                    </div>
+                </div>
+                <a href="#concept">Le concept</a>
+                <a href="#locations">Nous trouver</a>
+                <a href="revendeur.html">
+                    <button class="loginBtn">Devenir Revendeur</button>
+                </a>
+
+            </div>
+
+        </div>
+
+        </div>
+    </header>
+    <!--Navbar end-->
+
+    <!--landing page start-->
+    <section class="landing-page">
+
+        <div class="landing-text">
+            <h1>Mobile Outfitters Sénégal</h1>
+            <h2>360° <br> degrés protection</h2>
+            <h3>Service et innovation de classe<br> mondiale...</h3>
+            <a href="tel:+221338250083"><button class="button2">Contactez-nous</button></a>
+            <a href="revendeur.html"><button class="button3">Devenir revendeur</button></a>
+        </div>
+
+
+    </section>
+
+    <!--landing page end-->
+
+    <!--About us start-->
+
+    <section id="concept" class="about-us">
+        <img src="img/about.jpg" alt="">
+
+        <div class="about-text">
+            <h3>Qui somme nous ?</h3>
+            <h1>LE CONCEPT</h1>
+            <h2><i>Service et innovation de classe mondiale!</i></h2>
+            <p> Avec plus de 700 boutiques à travers 50 pays, Mobile Outfitters propose des produits est services
+                uniques
+                au monde pour vos appareils électroniques.
+                Une tablette, <br>un smartphone, ordinateur portable ou console ? Pas de problème, nous vous offrons un
+                service personnalisé où chaque produit est garanti à vie. De plus, grâce à<br> la machine RapidCut,
+                votre
+                découpe personnalisée est prête en quelques <br>secondes sur place.
+                <br>
+                <br>
+                Leader de la protection d’écran mat (anti-reflets) Les traces de doigts et reflets empêchent souvent
+                une
+                bonne visibilité sur votre écran. C’est pour cette raison que nous vous proposons le Clear Coat
+                Matte
+                qui correspond spécifiquement à ces critères. De plus, notre choix de protections est très large,
+                alors
+                n’hésitez plus !
+            </p>
+        </div>
+    </section>
+    <!--About us end-->
+
+    <section class="products-section-mobile">
+        <div class="mobile-products-content">
+            <div class="part-1-mobile">
+                <div class="text-area-mobile">
+                    <h3>Clear Coat</h3>
+                    <h1>Protection Anti-Rayures</h1>
+                    <a href="#"><button type="button">En savoir plus</button></a>
+                </div>
+                <div class="image-mobile">
+                    <img src="img/apple-watch-ultra.png" alt="">
+                </div>
+            </div>
+
+            <div class="part-2-mobile">
+                <div class="text-area-mobile-2">
+                    <h3>Fusion</h3>
+                    <h1>Protection Anti-Choc</h1>
+                    <a href="#"><button type="button">En savoir plus</button></a>
+                </div>
+                <div class="image-mobile-2">
+                    <img src="img/mobile s23-05.png" alt="">
+                </div>
+            </div>
+
+            <div class="part-3-mobile">
+                <div class="text-area-mobile-3">
+                    <h3>Style Skins</h3>
+                    <h1>Personnalisation</h1>
+                    <a href="#"><button type="button">En savoir plus</button></a>
+                </div>
+                <div class="image-mobile-3">
+                    <img src="img/style-skins-mobile-1.png" alt="">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!--products icons start-->
+
+    <div class="under-about-us">
+        <h3>Bénéficiez d’une installation par<br> un professionnel ainsi qu’une protection garantie à vie. </h3>
+    </div>
+    <!--products icons end-->
+
+    <!--Products start-->
+    <section class="products-icons">
+        <div class="matte"> <a href="original-matte.html"> <img src="img/matte (1).png" alt=""></a></div>
+        <div class="original"><a href="original-matte.html"> <img src="img/original.png" alt=""></a></div>
+        <div class="fusion"> <a href="fusion.html"> <img src="img/Fusion.png" alt=""></a></div>
+        <div class="style"> <a href="style-skins.html"> <img src="img/Style-Skins1.png" alt=""></a></div>
+
+    </section>
+    <!--Products start-->
+
+    <!--Products section-->
+
+    <section class="products-section">
+        <div id="clear-coat" class="container-1">
+            <div class="products-text">
+                <h3>Clear coat</h3>
+                <h1>Protection <br> Anti-Rayures</h1>
+                <div class="view-more-1">
+                    <a href="original-matte.html">En savoir plus</a>
+                </div>
+
+            </div>
+            <div class="products-image">
+                <img class="products-img" src="img/apple-watch-ultra.png" alt="">
+            </div>
+        </div>
+        <!--1-->
+        <div id="fusion" class="container-2">
+            <div class="products-image-2">
+                <img class="products-img-2" src="img//mobile s23-05.png" alt="">
+            </div>
+            <div class="products-text-2">
+                <h3>Fusion</h3>
+                <h1>Protection<br>Anti-Choc</h1>
+                <div class="view-more-2">
+                    <a href="#">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+        <!--2-->
+        <div id="style-skins" class="container-3">
+            <div class="products-text-3">
+                <h3>Style skins</h3>
+                <h1>Personnalisation</h1>
+                <div class="view-more-3">
+                    <a href="#">En savoir plus</a>
+                </div>
+            </div>
+            <div class="products-image-3">
+                <img class="products-img-3" src="img/style-skins-mobile-1.png" alt="">
+            </div>
+        </div>
+        <!--3-->
+
+    </section>
+
+    <!--Products end-->
+    <section class="testomonials-1">
+        <div class="box-text">
+            <h1>TÉMOIGNAGES</h1>
+            <p>Des retours de nos clients fidèles sur <br> nos services!</p>
+        </div>
+    </section>
+
+    <div class="wrapper">
+
+        <div class="box">
+            <i class="fas fa-quote-left quote"></i>
+            <p>Je suis très satisfait de Mobile Outfitters. Le personnel est sympathique et professionnel.
+                <br>
+                <br>
+                <br>
+
+            </p>
+            <div class="content-gg">
+                <div class="info">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="img/gallery/1.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <i class="fas fa-quote-left quote"></i>
+            <p>"Le film Clear-Coat Matte a une excellente texture et a été installé de manière experte à l'emplacement
+                de Sea Plaza." <br>
+                <br>
+                <br>
+            </p>
+            <div class="content-gg">
+                <div class="info">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="img/gallery/1.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <i class="fas fa-quote-left  quote"></i>
+            <p>La gamme de produits est impressionnante, les accessoires sont de bonne qualité et durables.
+                <br>
+                <br>
+                <br>
+
+
+            <div class="content-gg">
+                <div class="info">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="img/gallery/1.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <section class="locations-section">
+        <div id="locations" class="locations-text">
+            <h4>Nous trouver</h4>
+            <h1>nos emplacements</h1>
+            <div class="blue-line-2"></div>
+            <h2> Découvrez nos emplacements au Sénégal et trouvez le plus proche de chez vous..</h2>
+            <h3>5 points de vente à Dakar</h3>
+        </div>
+    </section>
+
+    <div style="display: flex; justify-content: center; margin-top: 50px;" id="map_wrapper">
+        <div style="width: 800px; height: 500px;" id="map_canvas" class="mapping"></div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="wrapper">
+
+        <div class="box">
+            <p style="line-height: 2; text-align: center;">Aéroport AIBD, <br>
+                <i class="fas fa-phone"></i>
+                +221 33 825 00 83
+            </p>
+            <div class="content-gg">
+            </div>
+        </div>
+
+        <div class="box">
+            <p style="line-height: 2; text-align: center;">Aéroport AIBD, <br>
+                <i class="fas fa-phone"></i>
+                +221 33 825 00 83
+            </p>
+            <div class="content-gg">
+            </div>
+        </div>
+        <div class="box">
+            <p style="line-height: 2; text-align: center;">Aéroport AIBD, <br>
+                <i class="fas fa-phone"></i>
+                +221 33 825 00 83
+            </p>
+            <div class="content-gg">
+            </div>
+        </div>
+        <div class="box">
+            <p style="line-height: 2; text-align: center;">Aéroport AIBD, <br>
+                <i class="fas fa-phone"></i>
+                +221 33 825 00 83
+            </p>
+            <div class="content-gg">
+            </div>
+        </div>
+        <div class="box">
+            <p style="line-height: 2; text-align: center;">Aéroport AIBD, <br>
+                <i class="fas fa-phone"></i>
+                +221 33 825 00 83
+            </p>
+            <div class="content-gg">
+            </div>
+        </div>
+        <div style="box-shadow: 0px 4px 8px rgba(0, 0, 0, 0);" class="box">
+            
+            <br>
+            <br>
+            <br>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+
+
+
+    <!-- <div class="preloader">
+        <div class="loader"></div>
+    </div> -->
+
+    <!-- <script>
+        window.addEventListener("load", function () {
+            const preloader = document.querySelector(".preloader");
+            preloader.style.display = "none";
+        });
+
+    </script> -->
+    <!-- footer starts -->
+
+    <section style="margin-top: 100px; margin-bottom: 20px;" class="follow-us">
+        <button>Suivez nous sur Instagram <a href="https://www.instagram.com/mobileoutfitters_senegal/"
+                target="_blank"></a></button>
+    </section>
+
+    <!------ Include the above in your HEAD tag ---------->
+
+    <!--======================footer start======================-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="content">
+            <div class="top">
+                <div class="logo-details">
+                    <span class="logo_name"><img src="img/logo.png" alt=""></span>
+                </div>
+                <div class="media-icons">
+                    <a href="https://www.facebook.com/mobileoutfitterssenegal/""><i class=" fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/mobileoutfitters_senegal/"><i class="fab fa-instagram"></i></a>
+                    <a href=https://www.tiktok.com/@mobileoutfitters_senegal"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.linkedin.com/company/mobileoutfitters"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="link-boxes">
+                <ul class="box-gg">
+                    <li class="link_name">Contactez-nous</li>
+                    <li><a href="https://www.instagram.com/mobileoutfitters_senegal/">Suivez nous sur Instagram</a></li>
+                    <li><a>Dakar, Senegal</a></li>
+                    <li><a href="tell:+221338250083">+221 33 825 00 83</a></li>
+                    <li><a href="email:mobilesenegal@gmail.com">mobilesenegal@gmail.com</a></li>
+                </ul>
+
+                <ul class="box-gg">
+                    <li class="link_name">Products</li>
+                    <li><a href="original-matte.html">Clear-Coat</a></li>
+                    <li><a href="fusion.html">Fusion</a></li>
+                    <li><a href="style-skins.html">Style Skins</a></li>
+                    <li><a href="https://www.moutfitters.com/our-products/">View all</a></li>
+                </ul>
+                <ul class="box-gg">
+                    <li class="link_name">Services</li>
+                    <li> <a href="https://www.moutfitters.com/support/lifetime-replacements/">Lifetime Replacements</a>
+                    </li>
+                    <li> <a href="https://www.moutfitters.com/locations/">Where to buy</a></li>
+                    <li> <a href="https://www.moutfitters.com/support/request-a-product/" target="_blank">Product
+                            Registration</a></li>
+                    <li><a href="https://www.moutfitters.com/support/request-a-product/" target="_blank">Request A
+                            Product</a></li>
+                    <li><a href="https://www.moutfitters.com/support/faqs/">FAQs</a></li>
+                </ul>
+                <ul class="box-gg">
+                    <li class="link_name">À propos de nous</li>
+                    <li><a href="https://www.moutfitters.com/careers-and-culture/">Our Culture</a></li>
+                    <li><a href="https://www.moutfitters.com/about-us/our-history/">Our History</a></li>
+                    <li><a href="revendeur.html">Become A Partner</a></li>
+                    <li><a href="https://www.moutfitters.com/blog/">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-details">
+            <div class="bottom_text">
+                <span class="copyright_text">Copyright © 2023 Design by <a href="https://www.newvisions.agency"> New
+                        Visions</a>All rights reserved</span>
+                <span class="policy_terms">
+                    <a href="https://www.iubenda.com/privacy-policy/98980996">Terms of Use / Privacy Policy </a>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+</body>
+
+
+</html>
