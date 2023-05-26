@@ -622,6 +622,14 @@
       width: 100%;
     }
 
+    body .swiper-slide img{
+      width: 350px;
+      height: auto;
+    }
+    body .color-buttons{
+      transform: scale(0.9);
+    }
+
   }
 
 .image-gallery {
