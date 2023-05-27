@@ -622,14 +622,6 @@
       width: 100%;
     }
 
-    body .swiper-slide img{
-      width: 350px;
-      height: auto;
-    }
-    body .color-buttons{
-      transform: scale(0.9);
-    }
-
   }
 
 .image-gallery {
@@ -1056,7 +1048,6 @@ footer .bottom-details .bottom_text {
 
 .swiper-container{
   margin-top: 50px;
-overflow: hidden;
 }
 
 .swiper-backface-hidden .swiper-slide{
