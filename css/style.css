@@ -2219,7 +2219,7 @@ input[type="submit"]:hover {
   color: white;
   background-color: #0cb5e4;
   padding: 15px 17px;
-  border-radius: 50%;
+  border-radius: 80%;
   cursor: pointer;
 }
 
