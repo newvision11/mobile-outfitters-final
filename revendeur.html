@@ -69,32 +69,37 @@
                 <!-- Dropdown menu -->
 
                 <div class="dropdown">
-                    <a class="dropBtn" style="cursor: pointer;">Nos Produits
-                        <i class="fas fa-angle-down"></i>
-                    </a>
-                    <div class="drop-content">
-                        <a href="original-matte.html">Protection Anti-Choc</a>
-                        <a href="fusion.html">Protection Anti-Rayures</a>
-                        <a href="style-skins.html">Personnalisation</a>
-
-                    </div>
-                </div>
-                <a href="Index.html#concept">Le concept</a>
-                <a href="Index.html#locations">Nous trouver</a>
-                <a href="revendeur.html">
-                    <button  class="loginBtn">Devenir Revendeur</button>
-                </a>
-
-            </div>
-
+                    <a href="#concept">Acueill</a>
+                    <a href="original-matte.html">Clear Coat</a>
+                    <a href="fusion.html">Fusion</a>
+                   <a href="style-skins.html">Style Skins</a>
+                   <a href="revendeur.html">
+                       <button class="loginBtn">Devenir Revendeur</button>
+                   </a>
+   
+               </div>
+   
         </div>
 
         </div>
     </header>
+    <script>
+
+        function kk(){
+            var a = document.querySelector('#nav-check');
+
+            if(a.checked){
+                document.querySelector('.dd').click();
+            }
+        }
+
+    </script>
+
     <!--Navbar end-->
 
     <!--revendeur section-->
-    <section class="revendeur-text">
+    <section onclick="kk()"
+    class="revendeur-text">
         <h3>PARTENAIRES</h3>
         <h1>MOBILE OUTFITTERS</h1>
     </section>
@@ -105,7 +110,8 @@
         </h1>
     </section>
 
-    <section class="main-info">
+    <section onclick="kk()"
+    class="main-info">
         <div class="part-1-revendeur">
             <div class="blue-line"></div>
             <div class="paragraph-1">
@@ -117,7 +123,7 @@
             </div>
         </div>
 
-        <div class="part-2-revendeur">
+        <div  class="part-2-revendeur">
             <div class="red-line"></div>
             <div class="paragraph-2">
                 <p>Vous êtes un indépendant, vous avez un centre de réparation ou une chaîne de magasins, actif dans le
@@ -140,7 +146,8 @@
 
     
     <!-- footer starts -->
-    <footer>
+    <footer onclick="kk()"
+    >
         <div class="content">
             <div class="top">
                 <div class="logo-details">
@@ -155,22 +162,21 @@
             </div>
             <div class="link-boxes">
                 <ul class="box-gg">
-                    <li class="link_name">Contactez-nous</li>
+                    <li class="link_name">CONTACTEZ-NOUS</li>
                     <li><a href="https://www.instagram.com/mobileoutfitters_senegal/">Suivez nous sur Instagram</a></li>
                     <li><a >Dakar, Senegal</a></li>
                     <li><a href="tell:+221338250083">+221 33 825 00 83</a></li>
-                    <li><a href="email:mobilesenegal@gmail.com">mobilesenegal@gmail.com</a></li>
+                    <li><a href="email:mobile.outfitters.sn@gmail.com">Contactez-nous</a></li>
                 </ul>
               
                 <ul class="box-gg">
-                    <li class="link_name">Products</li>
+                    <li class="link_name">PRODUCTS</li>
                     <li><a href="original-matte.html">Clear-Coat</a></li>
                     <li><a href="fusion.html">Fusion</a></li>
                     <li><a href="style-skins.html">Style Skins</a></li>
-                    <li><a href="https://www.moutfitters.com/our-products/">View all</a></li>
                 </ul>
                 <ul class="box-gg">
-                    <li class="link_name">Services</li>
+                    <li class="link_name">SERVICES</li>
                     <li> <a href="https://www.moutfitters.com/support/get-a-replacement/">Lifetime Replacements</a></li>
                     <li> <a href="https://www.moutfitters.com/locations/">Where to buy</a></li>
                     <li> <a href="https://www.moutfitters.com/support/request-a-product/" target="_blank">Product Registration</a></li>
@@ -178,13 +184,14 @@
                     <li><a href="https://www.moutfitters.com/support/faqs/" >FAQs</a></li>
                 </ul>
                 <ul class="box-gg">
-                    <li class="link_name">À propos de nous</li>
+                    <li class="link_name">À PROPOS NOUS</li>
                     <li><a href="https://www.moutfitters.com/careers-and-culture/">Our Culture</a></li>
                     <li><a href="https://www.moutfitters.com/about-us/our-history/">Our History</a></li>
                     <li><a href="revendeur.html">Become A Partner</a></li>
                     <li><a href="https://www.moutfitters.com/blog/">Blog</a></li>
                 </ul>
             </div>
+        </div>
         </div>
         <div class="bottom-details">
             <div class="bottom_text">

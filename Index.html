@@ -39,7 +39,7 @@
 
 </head>
 
-<body onload="myFunction()">
+<body >
 
     <script>
 
@@ -112,7 +112,6 @@
     <header>
         <!--Navbar start-->
         <div class="navbar">
-
             <!-- Navbar logo -->
             <div class="nav-header">
                 <div class="nav-logo">
@@ -121,34 +120,24 @@
                     </a>
                 </div>
             </div>
-
             <!-- responsive navbar toggle button -->
             <input type="checkbox" id="nav-check">
             <div class="nav-btn">
-                <label for="nav-check">
+                <label class="dd" for="nav-check">
                     <span></span>
                     <span></span>
                     <span></span>
                 </label>
             </div>
-
             <!-- Navbar items -->
             <div class="nav-links">
                 <!-- Dropdown menu -->
 
                 <div class="dropdown">
-                    <a class="dropBtn" style="cursor: pointer;">Nos Produits
-                        <i class="fas fa-angle-down"></i>
-                    </a>
-                    <div class="drop-content">
-                        <a href="original-matte.html">Protection Anti-Choc</a>
-                        <a href="fusion.html">Protection Anti-Rayures</a>
-                        <a href="style-skins.html">Personnalisation</a>
-
-                    </div>
-                </div>
-                <a href="#concept">Le concept</a>
-                <a href="#locations">Nous trouver</a>
+                 <a href="#">Acueill</a>
+                 <a href="original-matte.html">Clear Coat</a>
+                 <a href="fusion.html">Fusion</a>
+                <a href="style-skins.html">Style Skins</a>
                 <a href="revendeur.html">
                     <button class="loginBtn">Devenir Revendeur</button>
                 </a>
@@ -156,17 +145,26 @@
             </div>
 
         </div>
-
         </div>
     </header>
     <!--Navbar end-->
+    <script>
 
-    <!--landing page start-->
-    <section class="landing-page">
+        function kk(){
+            var a = document.querySelector('#nav-check');
+
+            if(a.checked){
+                document.querySelector('.dd').click();
+            }
+        }
+
+    </script>
+      
+      <section onclick="kk()" class="landing-page">
 
         <div class="landing-text">
             <h1>Mobile Outfitters Sénégal</h1>
-            <h2>protection <br>360° degrés </h2>
+            <h2>Protection <br>360° degrés </h2>
             <h3>Service innovant de classe mondiale</h3>
             <a href="tel:+221338250083"><button class="button2">Contactez-nous</button></a>
             <a href="revendeur.html"><button class="button3">Devenir revendeur</button></a>
@@ -179,7 +177,7 @@
 
     <!--About us start-->
 
-    <section id="concept" class="about-us">
+    <section  onclick="kk()" id="concept" class="about-us">
         <img src="img/about.jpg" alt="">
 
         <div class="about-text">
@@ -197,8 +195,8 @@
         </div>
     </section>
     <!--About us end-->
-
-    <section class="products-section-mobile">
+ 
+    <section  onclick="kk()" class="products-section-mobile">
         <div class="mobile-products-content">
             <div class="part-1-mobile">
                 <div class="text-area-mobile">
@@ -244,7 +242,7 @@
     <!--products icons end-->
 
     <!--Products start-->
-    <section class="products-icons">
+    <section  onclick="kk()" class="products-icons">
         <div class="matte"> <a href="original-matte.html"> <img src="img/matte (1).png" alt=""></a></div>
         <div class="original"><a href="original-matte.html"> <img src="img/original.png" alt=""></a></div>
         <div class="fusion"> <a href="fusion.html"> <img src="img/Fusion.png" alt=""></a></div>
@@ -255,7 +253,7 @@
 
     <!--Products section-->
 
-    <section class="products-section">
+    <section  onclick="kk()" class="products-section">
         <div id="clear-coat" class="container-1">
             <div class="products-text">
                 <h3>Clear-Coat</h3>
@@ -306,7 +304,7 @@
 
 
 
-    <section class="locations-section">
+    <section  onclick="kk()" class="locations-section">
         <div id="locations" class="locations-text">
             <h4>Nous trouver</h4>
             <h1>Nos emplacements</h1>
@@ -327,7 +325,7 @@
 
 
 
-    <div class="wrapper">
+    <div  onclick="kk()" class="wrapper">
 
         <div class="box">
             <a style="text-decoration: none; color: black;" href="tel:221338250083">
@@ -417,7 +415,7 @@
     </script> -->
     <!-- footer starts -->
 
-    <section style="margin-top: 100px; margin-bottom: 20px;" class="follow-us">
+    <section  onclick="kk()" style="margin-top: 100px; margin-bottom: 20px;" class="follow-us">
         <button>Suivez nous sur Instagram <a href="https://www.instagram.com/mobileoutfitters_senegal/"
                 target="_blank"></a></button>
     </section>
@@ -452,7 +450,8 @@
 
 
 
-    <footer>
+    <footer onclick="kk()"
+    >
         <div class="content">
             <div class="top">
                 <div class="logo-details">
@@ -467,39 +466,36 @@
             </div>
             <div class="link-boxes">
                 <ul class="box-gg">
-                    <li class="link_name">Contactez-nous</li>
+                    <li class="link_name">CONTACTEZ-NOUS</li>
                     <li><a href="https://www.instagram.com/mobileoutfitters_senegal/">Suivez nous sur Instagram</a></li>
-                    <li><a>Dakar, Senegal</a></li>
+                    <li><a >Dakar, Senegal</a></li>
                     <li><a href="tell:+221338250083">+221 33 825 00 83</a></li>
-                    <li><a href="email:mobilesenegal@gmail.com">mobilesenegal@gmail.com</a></li>
+                    <li><a href="email:mobile.outfitters.sn@gmail.com">Contactez-nous</a></li>
                 </ul>
-
+              
                 <ul class="box-gg">
-                    <li class="link_name">Products</li>
+                    <li class="link_name">PRODUCTS</li>
                     <li><a href="original-matte.html">Clear-Coat</a></li>
                     <li><a href="fusion.html">Fusion</a></li>
                     <li><a href="style-skins.html">Style Skins</a></li>
-                    <li><a href="https://www.moutfitters.com/our-products/">View all</a></li>
                 </ul>
                 <ul class="box-gg">
-                    <li class="link_name">Services</li>
-                    <li> <a href="https://www.moutfitters.com/support/lifetime-replacements/">Lifetime Replacements</a>
-                    </li>
+                    <li class="link_name">SERVICES</li>
+                    <li> <a href="https://www.moutfitters.com/support/get-a-replacement/">Lifetime Replacements</a></li>
                     <li> <a href="https://www.moutfitters.com/locations/">Where to buy</a></li>
-                    <li> <a href="https://www.moutfitters.com/support/request-a-product/" target="_blank">Product
-                            Registration</a></li>
-                    <li><a href="https://www.moutfitters.com/support/request-a-product/" target="_blank">Request A
-                            Product</a></li>
-                    <li><a href="https://www.moutfitters.com/support/faqs/">FAQs</a></li>
+                    <li> <a href="https://www.moutfitters.com/support/request-a-product/" target="_blank">Product Registration</a></li>
+                    <li><a href="https://www.moutfitters.com/support/request-a-product/" target="_blank">Request A Product</a></li>
+                    <li><a href="https://www.moutfitters.com/support/faqs/" >FAQs</a></li>
                 </ul>
                 <ul class="box-gg">
-                    <li class="link_name">À propos de nous</li>
+                    <li class="link_name">À PROPOS NOUS</li>
                     <li><a href="https://www.moutfitters.com/careers-and-culture/">Our Culture</a></li>
                     <li><a href="https://www.moutfitters.com/about-us/our-history/">Our History</a></li>
                     <li><a href="revendeur.html">Become A Partner</a></li>
                     <li><a href="https://www.moutfitters.com/blog/">Blog</a></li>
                 </ul>
             </div>
+        </div>
         </div>
         <div class="bottom-details">
             <div class="bottom_text">

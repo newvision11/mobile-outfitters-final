@@ -324,7 +324,6 @@ body {
         height: 450px;
         width: auto;
         position: relative;
-        top: 150px;
     }
     body .landing-text p {
         line-height: 1.85;
@@ -366,13 +365,12 @@ body {
     width: 100%;
     gap: 150px;
     margin-top: 50px;
+    background-image: url(/img/back-2.jpg);
 }
 
 
 .fusion-video video {
-    height: 520px;
     width: auto;
-    margin-bottom: 50px;
 }
 
 .landing-text {
