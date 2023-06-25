@@ -1599,7 +1599,7 @@ body {
 
 /**locations section**/
 .locations-section {
-  margin-top: 100px;
+  margin-top: 200px;
 }
 
 .locations-text {
@@ -1608,6 +1608,7 @@ body {
   margin-inline: auto;
   margin-top: 100px;
   transform: scale(1);
+
 }
 
 .locations-text h4 {
@@ -2208,9 +2209,10 @@ input[type="submit"]:hover {
   body .scroll-top {
     color: white;
     background-color: #0cb5e4;
-    padding: 14px 20px;
-    border-radius: 50%;
+    padding: 14px 21px;
+    border-radius: 70%;
     cursor: pointer;
+    z-index: 99999;
   }
 }
 
@@ -2224,6 +2226,8 @@ input[type="submit"]:hover {
   padding: 15px 17px;
   border-radius: 80%;
   cursor: pointer;
+  z-index: 99999;
+
 }
 
 .scroll-top:hover {
@@ -2787,4 +2791,60 @@ footer .bottom-details .bottom_text {
   color: #000;
   border-bottom: 2px solid #000;
   text-decoration: none;
+}
+
+
+
+
+
+
+
+  /**gallery*/
+  @media (max-width: 800px){
+    body .image-gallery{
+      grid-template-columns: repeat(1, 1fr);
+      gap: 70px;
+      width: 100%;
+      z-index: -999;
+    }
+
+  }
+
+.image-gallery {
+    transform: scale(0.8);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+    width: 95%;
+    height: auto;
+    margin-inline: auto;
+    transition: all 0.5s ease;
+    padding-bottom: 200px;
+}
+.image-container {
+    object-fit: contain;
+    overflow: hidden;
+    transition: all 0.5s ease;
+
+  }
+
+
+  .image-container img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    transition: all 0.5s ease;
+
+  }
+  .image-container img:hover{
+    transform: scale(1.05);
+    transition: all 0.8s ease;
+    filter: brightness(80%);
+  }
+  
+
+.above-grid-text{
+  background-color: #0077B5;
+  display: flex;
+  justify-content: center;
 }
