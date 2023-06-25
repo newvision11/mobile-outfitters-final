@@ -323,6 +323,10 @@
    body .landing-text p{
     width: 90%;
    }
+   body .swiper-slide{
+    height: 250px;
+    max-width: auto;
+   }
 }
 .landing-container {
     background-image: url(../img/style-skin-landing.jpg);
@@ -771,49 +775,31 @@ footer .content .top {
 }
 
 .top .media-icons a:nth-child(1) {
-  background: #4267B2;
+  background: #0077B5;
 }
 
-.top .media-icons a:nth-child(1):hover {
-  color: #4267B2;
-  background: #fff;
-}
 
 .top .media-icons a:nth-child(2) {
-  background: #1DA1F2;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf-Jdo6l_tLxIWVHs3mUGOHtV3ApSFVqKBt93YGPmY&s);
+  background-position: center;
+
 }
 
-.top .media-icons a:nth-child(2):hover {
-  color: #1DA1F2;
-  background: #fff;
-}
 
 .top .media-icons a:nth-child(3) {
-  background: #E1306C;
+  background: #000000;
 }
 
-.top .media-icons a:nth-child(3):hover {
-  color: #E1306C;
-  background: #fff;
-}
 
 .top .media-icons a:nth-child(4) {
   background: #0077B5;
 }
 
-.top .media-icons a:nth-child(4):hover {
-  color: #0077B5;
-  background: #fff;
-}
 
 .top .media-icons a:nth-child(5) {
   background: #FF0000;
 }
 
-.top .media-icons a:nth-child(5):hover {
-  color: #FF0000;
-  background: #fff;
-}
 
 footer .content .link-boxes {
   width: 100%;
@@ -1048,6 +1034,7 @@ footer .bottom-details .bottom_text {
 
 .swiper-container{
   margin-top: 50px;
+  overflow: hidden;
 }
 
 .swiper-backface-hidden .swiper-slide{
@@ -1056,7 +1043,8 @@ footer .bottom-details .bottom_text {
 }
 
 .swiper-slide img{
-  width: fit-content;
+  width: 500px;
+  height: auto;
 }
 .color-buttons {
   margin-top: 10px;
