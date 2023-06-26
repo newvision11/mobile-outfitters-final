@@ -1652,6 +1652,15 @@ body {
   #concept {
     scroll-margin: 120px;
   }
+  body #last-box{
+    display: none;
+  }
+  body .image-gallery{
+    padding-bottom: 0;
+  }
+  body .locations-section {
+    margin-top: 0;
+  }
 
 }
 
@@ -1800,11 +1809,7 @@ input[type="submit"]:hover {
     transform: scale(0.5);
 
   }
-
-
 }
-
-
 @media (max-width: 768px) {
   body .products-icons {
     transform: scale(0.3);
@@ -2806,6 +2811,8 @@ footer .bottom-details .bottom_text {
       gap: 70px;
       width: 100%;
       z-index: -999;
+      transform: scale(0.9);
+
     }
 
   }
