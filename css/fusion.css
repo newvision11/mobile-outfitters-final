@@ -438,7 +438,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 150px;
-    margin-top: 100px;
+    margin-bottom: 150px;
 }
 
 .purple-phones img {
@@ -494,7 +494,6 @@ body {
 
 .third-section-fusion {
     background-color: #35cdf7;
-    margin-top: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
