@@ -1275,13 +1275,59 @@ body {
   overflow: hidden;
 }
 
-.products-icons {
-  transform: scale(0.8);
-  margin-top: 30px;
+
+.logo-icons{
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 50px;
+  gap: 30px;
 }
+
+.logo-icons img{
+  height: 40px;
+  width: auto;
+}
+
+.fusion-logo img{
+  height: 30px;
+}
+
+
+@media (max-width: 880px){
+  body .logo-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    gap: 10px;
+  }
+  
+  body .logo-icons img{
+    height: 17px;
+    width: auto;
+  }
+  
+  body .fusion-logo img{
+    height: 12px;
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .products-image,
 .products-image-2,
@@ -1403,12 +1449,18 @@ body {
   right: 50%;
   transform: translate(-50%);
 }
+.question-text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+}
 .question-text h1 {
   margin-top: 60px;
   text-align: center;
   font-size: 33px;
   font-weight: 700;
+  width: 50%;
 }
 
 @media (max-width: 880px) {
@@ -1419,6 +1471,7 @@ body {
   body .part-1-revendeur {
     transform: scale(0.9);
     gap: 20px;
+
   }
 
   body .part-2-revendeur {
@@ -1447,8 +1500,8 @@ body {
   }
 
   body .question-text h1 {
-    font-size: 20px;
-
+    font-size: 22px;
+    width: 96%;
   }
 
   body .line-under {
@@ -1804,17 +1857,8 @@ input[type="submit"]:hover {
   }
 }
 
-@media (min-width: 768px) {
-  body .products-icons {
-    transform: scale(0.5);
 
-  }
-}
-@media (max-width: 768px) {
-  body .products-icons {
-    transform: scale(0.3);
 
-  }
 
   body .original-start {
     flex-direction: column;
@@ -1844,7 +1888,7 @@ input[type="submit"]:hover {
   body .start-text p {
     line-height: 1.9;
   }
-}
+
 
 
 

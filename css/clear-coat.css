@@ -257,7 +257,7 @@
   @media (max-width: 800px){
     body .image-gallery{
       grid-template-columns: repeat(2, 1fr);
-      gap: 60px;
+      gap: 10px;
       width: 100%;
     }
 

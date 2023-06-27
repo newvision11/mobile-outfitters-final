@@ -330,7 +330,7 @@ body {
         padding: 20px 0;
     }
 }
-@media (max-width:800px) {
+@media (max-width: 900px) {
     body .fusion-landing-page {
         flex-direction: column;
         gap: 0;
@@ -573,7 +573,7 @@ body {
   @media (max-width: 800px){
     body .image-gallery{
       grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
+      gap: 11px;
       width: 100%;
     }
 
@@ -626,6 +626,7 @@ body {
     margin-inline: auto;
     text-transform: uppercase;
     transform: scale(1.1);
+    padding-bottom: 50px;
 }
 
 .life-time h4 {
