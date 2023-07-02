@@ -642,9 +642,10 @@ body {
   body .about-us {
     display: flex;
     flex-direction: column;
-    gap: 50px;
     margin-top: 60px;
     text-align: center;
+    margin-left: 0;
+    width: 90%;
   }
 
   body .about-text {
@@ -672,23 +673,14 @@ body {
 }
 
 .about-us {
-  display: flex;
   gap: 50px;
-  width: 90%;
   margin-top: 100px;
-  margin-inline: auto;
+  width: 100%;
+  display: flex;
   justify-content: center;
-  align-items: center;
 }
-
-.about-us img {
-  height: 500px;
-  width: 400px;
-  object-fit: cover;
-}
-
-.about-text {
-  width: 50%;
+.about-text{
+  width: 80%;
 }
 
 
@@ -1194,16 +1186,17 @@ body {
     display: none;
   }
 }
+
 @media (max-width: 800px) {
-  
-body .map2{
-  width: 100vw;
-  height: 60vh;
-}
+
+  body .map2 {
+    width: 100vw;
+    height: 60vh;
+  }
 }
 
 
-.map2{
+.map2 {
   width: 800px;
   height: 500px;
   margin-inline: auto;
@@ -1321,7 +1314,7 @@ body .map2{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 100px;
     gap: 10px;
   }
 
@@ -1337,6 +1330,16 @@ body .map2{
 }
 
 
+@media (max-width: 880px){
+  body .life-time {
+    text-align: center;
+    width: fit-content;
+    margin-inline: auto;
+    text-transform: uppercase;
+    margin-top: 50px;
+    transform: scale(0.95);
+  }
+}
 
 
 
@@ -1610,7 +1613,7 @@ body .map2{
 
 .life-time h2 {
   font-size: 20px;
-
+  
 }
 
 .blue-line-2 {
@@ -1670,6 +1673,8 @@ body .map2{
 @media (max-width:800px) {
   body .follow-us {
     transform: scale(0.8);
+    margin-top: 20px;
+    padding-top: 20px;
   }
 
 }
@@ -1872,6 +1877,8 @@ input[type="submit"]:hover {
 @media (max-width: 800px) {
   body .mobile-phone-on {
     display: flex;
+    position: relative;
+    top: 50px;
   }
 
   body .matte-original-text {
@@ -1883,7 +1890,7 @@ input[type="submit"]:hover {
     width: fit-content;
     margin-inline: auto;
     text-transform: uppercase;
-    margin-top: 100px;
+    margin-top: 50px;
     transform: scale(0.8);
   }
 
@@ -1996,6 +2003,7 @@ input[type="submit"]:hover {
   body .part-1 {
     flex-direction: column-reverse;
     margin-top: 100px;
+    gap: 80px;
   }
 
   body .pink-phone img {
@@ -2115,9 +2123,16 @@ input[type="submit"]:hover {
 
 
 
+.offre{
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+}
 
-
-
+.offre h1{
+  font-size: 42px;
+  font-weight: bolder;
+}
 
 
 
@@ -2127,18 +2142,30 @@ input[type="submit"]:hover {
 
 /**original-last-start**/
 @media (max-width: 800px) {
-  body .life-time {
-    transform: scale(0.8);
-  }
+  
+body .offre{
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-@media(max-width: 320px) {
-  body .life-time {
-    transform: scale(0.6);
-    background-color: #03b2e2;
-    margin-right: 50px;
-  }
+body .offre h1{
+  font-size: 30px;
+  font-weight: bolder;
+  width: 80%;
+  text-align: center;
+  line-height: 1.7;
 }
+
+
+
+
+
+
+
+
+}
+
 
 .life-time .button-area {
   margin-top: 20px;
@@ -2877,6 +2904,9 @@ h2 {
 
 .video-text {
   width: 40%;
+  color: white;
+  font-size: 25px;
+  line-height: 1.7;
 }
 
 .video-text h3 {
@@ -2904,9 +2934,10 @@ h2 {
     width: 70%;
   }
 
-  .video-text h3 {
-    font-size: 25px;
+  .video-text h1 {
+    font-size: 20px;
     color: white;
+    line-height: 1.5;
 
   }
 
