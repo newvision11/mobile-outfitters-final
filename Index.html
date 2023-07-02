@@ -17,6 +17,11 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
     <script>
         $(document).ready(function () {
             $(window).scroll(function () {
@@ -43,67 +48,67 @@
 
     <script>
 
-jQuery(function ($) {
-  // Asynchronously Load the map API 
-  var script = document.createElement('script');
-  script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBZib4Lvp0g1L8eskVBFJ0SEbnENB6cJ-g&callback=initialize";
-  document.body.appendChild(script);
-});
+        jQuery(function ($) {
+            // Asynchronously Load the map API 
+            var script = document.createElement('script');
+            script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBZib4Lvp0g1L8eskVBFJ0SEbnENB6cJ-g&callback=initialize";
+            document.body.appendChild(script);
+        });
 
-function initialize() {
-  var map;
-  var bounds = new google.maps.LatLngBounds();
-  var mapOptions = {
-    mapTypeId: 'roadmap'
-  };
+        function initialize() {
+            var map;
+            var bounds = new google.maps.LatLngBounds();
+            var mapOptions = {
+                mapTypeId: 'roadmap'
+            };
 
-  // Display a map on the page
-  map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
-  map.setTilt(45);
+            // Display a map on the page
+            map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+            map.setTilt(45);
 
-  // Multiple Markers
-  var markers = [
-    ['Auchan Mermoze', 14.693801727747177, -17.47445079815249],
-    ['Sea Plazza', 14.686194293713555, -17.453816919511905],
-    ['Sea Plazza', 14.713033764994819, -17.476966732470295],
-    ['Sea Plazza', 14.74156217338199, -17.511615868755786],
-    ['Sea Plazza', 14.671248703184332, -17.06743333068287],
-  ];
+            // Multiple Markers
+            var markers = [
+                ['Auchan Mermoze', 14.693801727747177, -17.47445079815249],
+                ['Sea Plazza', 14.686194293713555, -17.453816919511905],
+                ['Sea Plazza', 14.713033764994819, -17.476966732470295],
+                ['Sea Plazza', 14.74156217338199, -17.511615868755786],
+                ['Sea Plazza', 14.671248703184332, -17.06743333068287],
+            ];
 
-  // Display multiple markers on a map
-  var infoWindow = new google.maps.InfoWindow({ maxWidth: 280 }),
-    marker, i;
+            // Display multiple markers on a map
+            var infoWindow = new google.maps.InfoWindow({ maxWidth: 280 }),
+                marker, i;
 
-  // Loop through our array of markers & place each one on the map  
-  for (i = 0; i < markers.length; i++) {
-    var image = 'img/map-logo-02-01.png';
-    var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
-    bounds.extend(position);
-    marker = new google.maps.Marker({
-      position: position,
-      map: map,
-      icon: image,
-    });
+            // Loop through our array of markers & place each one on the map  
+            for (i = 0; i < markers.length; i++) {
+                var image = 'img/map-logo-02-01.png';
+                var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
+                bounds.extend(position);
+                marker = new google.maps.Marker({
+                    position: position,
+                    map: map,
+                    icon: image,
+                });
 
-    // Allow each marker to have an info window    
-    google.maps.event.addListener(marker, 'mouseover', (function (marker, i) {
-      return function () {
-        infoWindow.setContent(infoWindowContent[i][0]);
-        infoWindow.open(map, marker);
-      }
-    })(marker, i));
-  }
+                // Allow each marker to have an info window    
+                google.maps.event.addListener(marker, 'mouseover', (function (marker, i) {
+                    return function () {
+                        infoWindow.setContent(infoWindowContent[i][0]);
+                        infoWindow.open(map, marker);
+                    }
+                })(marker, i));
+            }
 
-  // Set the default zoom to a specific location (Auchan Mermoze)
-  var defaultLocation = new google.maps.LatLng(markers[0][1], markers[0][2]);
-  map.setCenter(defaultLocation);
-  map.setZoom(12);
+            // Set the default zoom to a specific location (Auchan Mermoze)
+            var defaultLocation = new google.maps.LatLng(markers[0][1], markers[0][2]);
+            map.setCenter(defaultLocation);
+            map.setZoom(12);
 
-  // Automatically center the map fitting all markers on the screen
-}
+            // Automatically center the map fitting all markers on the screen
+        }
     </script>
 
-    <header >
+    <header>
         <!--Navbar start-->
         <div class="navbar">
             <!-- Navbar logo -->
@@ -184,10 +189,11 @@ function initialize() {
     <section onclick="kk()" id="concept" class="about-us">
         <img src="img/about.jpg" alt="">
 
-        
+
         <div class="about-text">
             <h3>Qui somme nous ?</h3>
-            <p style="text-align: start;"> Avec plus de 700 boutiques à travers 60 pays, Mobile Outfitters propose des produits est services
+            <p style="text-align: start;"> Avec plus de 700 boutiques à travers 60 pays, Mobile Outfitters propose des
+                produits est services
                 uniques
                 au monde pour vos appareils électroniques. <br> <br>
                 Une tablette,un smartphone, ordinateur portable ou console ? Pas de problème, nous vous offrons un
@@ -198,12 +204,15 @@ function initialize() {
                 votre
                 découpe personnalisée est prête en quelquessecondes sur place.
             </p>
-            <h1 style="text-align: center;"  >LE CONCEPT</h1>
-            <p>Il a fallu 3 ans de recherche et de développement pour créer la meilleure protection d'écran jamais produite.
+            <h1 style="text-align: center;">LE CONCEPT</h1>
+            <p>Il a fallu 3 ans de recherche et de développement pour créer la meilleure protection d'écran jamais
+                produite.
 
-                Le résultat est une feuille de Fusion Clear-Coat spéciale basée sur la technologie brevetée TriACTIVE ™ pour la protection contre les chocs, combinant 3 couches de polyuréthane qui rendent l'écran de l'appareil jusqu'à 3 fois plus fort et résistant aux rayures et aux dommages.
-                
-                </p>
+                Le résultat est une feuille de Fusion Clear-Coat spéciale basée sur la technologie brevetée TriACTIVE ™
+                pour la protection contre les chocs, combinant 3 couches de polyuréthane qui rendent l'écran de
+                l'appareil jusqu'à 3 fois plus fort et résistant aux rayures et aux dommages.
+
+            </p>
         </div>
     </section>
     <!--About us end-->
@@ -325,9 +334,10 @@ function initialize() {
         </div>
     </section>
 
-    <div style="display: flex; justify-content: center; margin-top: 50px;" id="map_wrapper">
+    <!-- <div style="display: flex; justify-content: center; margin-top: 50px;" id="map_wrapper">
         <div style="width: 800px; height: 500px;" id="map_canvas" class="mapping"></div>
-    </div>
+    </div> -->
+    <div  class="map2" id="map"></div>
 
 
 
@@ -397,19 +407,19 @@ function initialize() {
                 </div>
             </a>
         </div>
-        <div style=" box-shadow: 5px 10px #ffffff00;"   class="box">
+        <div style=" box-shadow: 5px 10px #ffffff00;" class="box">
 
         </div>
 
-        <div  onclick="kk()" id="life-time" class="life-time">
+        <div onclick="kk()" id="life-time" class="life-time">
             <div class="text-area">
-    
-            <h1 style="font-size: 36px; "> NOS OFFRES SPÉCIALES</h1>
+
+                <h1 style="font-size: 36px; "> NOS OFFRES SPÉCIALES</h1>
             </div>
         </div>
-    
 
-        <section  style="margin-bottom: 100px;" onclick="kk()" class="image-gallery">
+
+        <section style="margin-bottom: 100px;" onclick="kk()" class="image-gallery">
 
             <div class="image-container">
                 <img src="img/summer11.jpg" alt="image1">
@@ -466,7 +476,25 @@ function initialize() {
 
 
 
+    <script>
+        var map = L.map('map').setView([14.71499522013416, -17.476921361663383], 11.5);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+        var customIcon = L.icon({
+            iconUrl: '/img/map-logo-02-01.png',
+            iconSize: [40, 40], // Size of the icon
 
+        });
+        
+        var marker = L.marker([14.693801727747177, -17.47445079815249], { icon: customIcon }).addTo(map);
+        var marker = L.marker([14.686194293713555, -17.453816919511905], { icon: customIcon }).addTo(map);
+        var marker = L.marker([14.713033764994819, -17.476966732470295], { icon: customIcon }).addTo(map);
+        var marker = L.marker([14.74156217338199, -17.511615868755786], { icon: customIcon }).addTo(map);
+        var marker = L.marker([14.671248703184332, -17.06743333068287], { icon: customIcon }).addTo(map);
+
+    </script>
 
 
 
