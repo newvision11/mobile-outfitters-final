@@ -425,7 +425,15 @@ footer .content .top {
   background-position: center;
 
 }
-
+.last-icons{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 80px;
+}
+.last-icons img{
+  height: 80px;
+  width: auto;
+}
 
 .top .media-icons a:nth-child(3) {
   background: #000000;
@@ -559,6 +567,9 @@ footer .bottom-details .bottom_text {
 @media (max-width: 900px) {
   footer .content .link-boxes {
     flex-wrap: wrap;
+  }
+  body .last-icons img{
+    height: 50px;
   }
 
   footer .content .link-boxes .input-box {

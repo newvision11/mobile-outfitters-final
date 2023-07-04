@@ -2931,14 +2931,28 @@ h2 {
   }
 
   .video-text {
-    width: 70%;
+    width: 80%;
   }
 
   .video-text h1 {
-    font-size: 20px;
+    font-size: 22px;
     color: white;
     line-height: 1.5;
+    font-weight: bolder;
 
   }
+  body .last-icons img{
+    height: 50px;
+  }
 
+}
+
+.last-icons{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 80px;
+}
+.last-icons img{
+  height: 80px;
+  width: auto;
 }

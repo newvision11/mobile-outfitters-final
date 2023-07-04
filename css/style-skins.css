@@ -473,7 +473,15 @@
   line-height: 1.5;
 }
 
-
+.last-icons{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 80px;
+}
+.last-icons img{
+  height: 80px;
+  width: auto;
+}
 
 /**headset section**/
 @media (max-width: 800px) {
@@ -483,6 +491,9 @@
   body .wrap22{
     position: relative;
     bottom: 100px;
+  }
+  body .last-icons img{
+    height: 50px;
   }
 
   body .headset img {

@@ -615,7 +615,15 @@
   background-color: #000000;
   z-index: 99999;
 }
-
+.last-icons{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 80px;
+}
+.last-icons img{
+  height: 80px;
+  width: auto;
+}
 .loader {
   border: 12px solid #000000;
   border-top: 12px solid #27bce6;
@@ -641,5 +649,8 @@
 @media (max-width:800px){
   body .follow-us{
      transform: scale(0.8);
+  }
+  body .last-icons img{
+    height: 50px;
   }
 }

@@ -615,11 +615,22 @@ body {
   filter: brightness(60%);
 }
 
-
+.last-icons{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 80px;
+}
+.last-icons img{
+  height: 80px;
+  width: auto;
+}
 /**life time starts**/
 @media (max-width:800px) {
   body .life-time {
     transform: scale(0.9);
+  }
+  body .last-icons img{
+    height: 50px;
   }
 }
 
