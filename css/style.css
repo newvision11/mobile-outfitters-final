@@ -590,21 +590,25 @@ body {
   color: #fff;
   width: fit-content;
   height: fit-content;
-  margin-left: 80px;
-  margin-top: 50px;
+  text-align: start;
 }
 
 .landing-text h1 {
   font-size: 20px;
   color: #fff;
   font-weight: 600;
+  margin: 0;
+  padding: 0;
+
 }
 
 .landing-text h2 {
   color: #fff;
-  font-size: 64px;
+  font-size: 58px;
   padding-bottom: 10px;
   line-height: 1.3;
+  margin: 0;
+  padding: 0;
 }
 
 .landing-text h3 {
@@ -612,6 +616,8 @@ body {
   font-weight: 500;
   padding: 0 0 15px;
   color: #fff;
+  margin: 0;
+  padding: 0;
 }
 
 .button2,
@@ -2152,7 +2158,7 @@ body .offre{
 body .offre h1{
   font-size: 30px;
   font-weight: bolder;
-  width: 80%;
+  width: 90%;
   text-align: center;
   line-height: 1.7;
 }
@@ -2906,11 +2912,16 @@ h2 {
   width: 40%;
   color: white;
   font-size: 25px;
-  line-height: 1.7;
 }
 
 .video-text h3 {
   font-size: 25px;
+  color: white;
+  font-weight: 300;
+
+}
+.video-text h1 {
+  font-size: 45px;
   color: white;
 
 }
