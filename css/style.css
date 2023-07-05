@@ -2614,9 +2614,8 @@ footer .content .link-boxes .box-gg {
 
 .content .link-boxes .box-gg .link_name {
   color: #000000;
-  font-size: 18px;
-  font-weight: 400;
-  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: bolder;
   position: relative;
 }
 
@@ -2631,7 +2630,6 @@ footer .content .link-boxes .box-gg {
 }
 
 .content .link-boxes .box-gg li {
-  margin: 6px 0;
   list-style: none;
 }
 
