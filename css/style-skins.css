@@ -860,6 +860,7 @@ footer .content .top {
 }
 
 
+
 footer .content .link-boxes {
   width: 100%;
   display: flex;
@@ -872,9 +873,8 @@ footer .content .link-boxes .box-gg {
 
 .content .link-boxes .box-gg .link_name {
   color: #000000;
-  font-size: 18px;
-  font-weight: 400;
-  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: bolder;
   position: relative;
 }
 
@@ -889,7 +889,6 @@ footer .content .link-boxes .box-gg {
 }
 
 .content .link-boxes .box-gg li {
-  margin: 6px 0;
   list-style: none;
 }
 
@@ -1038,151 +1037,190 @@ footer .bottom-details .bottom_text {
   }
 }
 
-.scroll-top {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  display: none;
-  color: white;
-  background-color: #0cb5e4;
-  padding: 15px 17px;
-  border-radius: 50%;
+.location {
+  margin-right: 20%;
+  padding: 20px;
+  border-bottom: 1px solid #707070;
   cursor: pointer;
+  background: #fff;
+  color: #000;
+  transition: all .3s ease;
 }
 
-.scroll-top:hover {
-  background-color: #27bce6;
+.location .title {
+  display: block;
+  font-size: 1.25em;
+  line-height: 1.1;
 }
 
-.follow-us {
-  font-weight: normal;
-  display: flex;
-  justify-content: center;
+.location .desc {
+  color: #02b3e3;
+  font-family: "rileno_sans_boldbold";
+  margin-bottom: 10px;
+  display: block;
 }
 
+.location .address {
+  line-height: 1.7;
+  margin: 0;
+}
 
-.follow-us button {
-
-  line-height: 1.5;
-  font-weight: normal;
-  text-align: center;
-  display: inline-block;
-  zoom: 1;
-  padding: 15px 14px;
-  margin: 5px auto 0 auto;
-  border: none;
+.location a.bottom_link {
+  color: #000;
+  border-bottom: 2px solid #000;
   text-decoration: none;
-  font-size: 18px;
-  line-height: 1.5;
-  border-radius: 4px;
-  box-sizing: border-box;
-  background: #408bd1;
-  color: #fff;
-  transition: all .1s ease-in;
-  cursor: pointer;
-}
-
-.follow-us button:hover {
-  background: #489dec;
 }
 
 
-@media (max-width:800px) {
-  body .follow-us {
-    transform: scale(0.8);
+
+
+
+
+
+/**gallery*/
+@media (max-width: 800px) {
+  body .image-gallery {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 70px;
+    width: 100%;
+    z-index: -999;
+    transform: scale(0.9);
   }
 }
 
-.swiper-container {
-  overflow: hidden;
-  padding-bottom: 60px;
+.image-gallery {
+  transform: scale(0.8);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 100px;
+  width: 95%;
+  height: auto;
+  margin-inline: auto;
+  transition: all 0.5s ease;
 }
 
-.swiper-backface-hidden .swiper-slide {
+.image-container {
+  object-fit: contain;
+  overflow: hidden;
+  transition: all 0.5s ease;
+
+}
+
+
+.image-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  transition: all 0.5s ease;
+
+}
+
+.image-container img:hover {
+  transform: scale(1.05);
+  transition: all 0.8s ease;
+  filter: brightness(80%);
+}
+
+
+.above-grid-text {
+  background-color: #0077B5;
   display: flex;
   justify-content: center;
 }
 
-.swiper-slide img {
-  width: 400px;
-  height: auto;
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  width: 80%;
+  margin-inline: auto;
+  gap: 10px;
+  padding-top: 100px;
 }
 
-.color-buttons {
-  margin-top: 10px;
+.grid-item {
   text-align: center;
 }
 
-.color-button {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  margin: 0 5px;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
+.grid-item img {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
 }
 
-/* Ajoutez des styles spécifiques à chaque bouton de couleur */
-.color-button[data-color="#ff0000"] {
-  background-image: url(/img/style-studio-8.JPG);
-
-  background-size: cover;
+h2 {
+  margin: 15px;
 }
 
-.color-button[data-color="#00ff00"] {
-  background-image: url(/img/style-studio-2.JPG);
 
-  background-size: cover;
-
+.video-main {
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.color-button[data-color="#0000ff"] {
-  background-image: url(/img/style-studio-3.JPG);
-
-  background-size: cover;
-
+.video-main img {
+  height: 600px;
 }
 
-.color-button[data-color="#696b5d"] {
-  background-image: url(/img/style-studio-4.JPG);
-
-  background-size: cover;
-
+.video-text {
+  width: 40%;
+  color: white;
+  font-size: 25px;
 }
 
-.color-button[data-color="#e9b114"] {
-  background-image: url(/img/style-studio-5.JPG);
+.video-text h3 {
+  font-size: 25px;
+  color: white;
+  font-weight: 300;
 
-  background-size: cover;
+}
+.video-text h1 {
+  font-size: 45px;
+  color: white;
 
 }
 
-.color-button[data-color="#ebd0cb"] {
-  background-size: cover;
-  background-image: url(/img/style-studio-6.JPG);
+
+@media (max-width: 880px) {
+
+
+  .video-main {
+    flex-direction: column;
+    background-color: #000000;
+    width: 100%;
+    height: 900px;
+  }
+
+  .video-main img {
+    height: 350px;
+  }
+
+  .video-text {
+    width: 80%;
+  }
+
+  .video-text h1 {
+    font-size: 22px;
+    color: white;
+    line-height: 1.5;
+    font-weight: bolder;
+
+  }
+  body .last-icons img{
+    height: 50px;
+  }
 
 }
 
-.color-button[data-color="#666668"] {
-  background-size: cover;
-  background-image: url(/img/style-studio-7.JPG);
-
-
+.last-icons{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 80px;
 }
-
-.color-button[data-color="#161714"] {
-  background-image: url(/img/style-studio-8.JPG);
-  background-size: cover;
-
-}
-
-.color-button[data-color="#d3d3d3"] {
-  background-image: url(/img/style-studio-1.JPG);
-  background-size: cover;
-
-}
-
-.swiper-pagination {
-  display: none;
+.last-icons img{
+  height: 80px;
+  width: auto;
 }
