@@ -88,7 +88,16 @@
   background: #6ddefd;
 }
 
-
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none;
+  color: white;
+  background-color: #0cb5e4;
+  padding: 15px 17px;
+  border-radius: 50%;
+}
 /***dropdown navbar ends***/
 
 .navbar {
@@ -434,7 +443,8 @@
     margin-top: 10px;
     transform: scale(0.9);
   }
-  body .part-1{
+
+  body .part-1 {
     margin-top: 0;
   }
 
@@ -473,12 +483,13 @@
   line-height: 1.5;
 }
 
-.last-icons{
+.last-icons {
   display: flex;
   justify-content: center;
   padding-bottom: 80px;
 }
-.last-icons img{
+
+.last-icons img {
   height: 80px;
   width: auto;
 }
@@ -488,11 +499,13 @@
   body .part-2 {
     flex-direction: column-reverse;
   }
-  body .wrap22{
+
+  body .wrap22 {
     position: relative;
     bottom: 100px;
   }
-  body .last-icons img{
+
+  body .last-icons img {
     height: 50px;
   }
 
@@ -876,6 +889,8 @@ footer .content .link-boxes .box-gg {
   font-size: 16px;
   font-weight: bolder;
   position: relative;
+  margin-bottom: 10px;
+
 }
 
 .link-boxes .box .link_name::before {
@@ -890,6 +905,8 @@ footer .content .link-boxes .box-gg {
 
 .content .link-boxes .box-gg li {
   list-style: none;
+  margin: 6px 0;
+
 }
 
 .content .link-boxes .box-gg li a {
@@ -1177,6 +1194,7 @@ h2 {
   font-weight: 300;
 
 }
+
 .video-text h1 {
   font-size: 45px;
   color: white;
@@ -1209,18 +1227,209 @@ h2 {
     font-weight: bolder;
 
   }
-  body .last-icons img{
+
+  body .last-icons img {
     height: 50px;
   }
 
 }
 
-.last-icons{
+.last-icons {
   display: flex;
   justify-content: center;
   padding-bottom: 80px;
 }
-.last-icons img{
+
+.last-icons img {
   height: 80px;
   width: auto;
+}
+
+.follow-us button {
+
+  line-height: 1.5;
+  font-weight: normal;
+  text-align: center;
+  display: inline-block;
+  zoom: 1;
+  padding: 15px 14px;
+  margin: 5px auto 0 auto;
+  border: none;
+
+}
+
+@media (max-width:800px) {
+  body .follow-us {
+    transform: scale(0.8);
+
+  }
+  body .swiper-slide img {
+    width: 320px;
+  
+  }
+  body .color-buttons {
+    margin-top: 0;
+    text-align: center;
+    
+  }
+}
+
+/**gallery*/
+
+.follow-us {
+  font-weight: normal;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+
+.follow-us button {
+
+  line-height: 1.5;
+  font-weight: normal;
+  text-align: center;
+  display: inline-block;
+  zoom: 1;
+  padding: 15px 14px;
+  margin: 5px auto 0 auto;
+  border: none;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 1.5;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: #408bd1;
+  color: #fff;
+  transition: all .1s ease-in;
+  cursor: pointer;
+}
+
+.follow-us button:hover {
+  background: #489dec;
+}
+
+.swiper-container {
+  overflow: hidden;
+}
+
+.swiper-pagination {
+  display: none;
+}
+
+.swiper-wrapper {
+  margin-inline: auto;
+  text-align: center;
+
+}
+
+.swiper-slide img {
+  width: 500px;
+
+}
+.swiper-slide{
+  overflow: hidden;
+}
+.color-buttons {
+  margin-top: 10px;
+  text-align: center;
+  
+}
+
+.image-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  transition: all 0.5s ease;
+
+}
+
+.color-button {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.color-button[data-color="#ff0000"] {
+  background-image: url(/img/style-studio-8.JPG);
+  background-size: cover;
+}
+
+.color-button[data-color="#0000ff"] {
+  background-image: url(/img/style-studio-3.JPG);
+  background-size: cover
+
+}
+
+.color-button[data-color="#696b5d"] {
+  background-image: url(/img/style-studio-4.JPG);
+  background-size: cover;
+
+}
+
+.color-button[data-color="#e9b114"] {
+  background-image: url(/img/style-studio-5.JPG);
+  background-size: cover;
+
+}
+
+.color-button[data-color="#ebd0cb"] {
+  background-size: cover;
+  background-image: url(/img/style-studio-6.JPG);
+}
+
+.color-button[data-color="#666668"] {
+  background-size: cover;
+  background-image: url(/img/style-studio-7.JPG);
+}
+
+.color-button[data-color="#161714"] {
+  background-image: url(/img/style-studio-8.JPG);
+  background-size: cover;
+}
+
+.color-button[data-color="#d3d3d3"] {
+  background-image: url(/img/style-studio-1.JPG);
+  background-size: cover;
+}
+
+.color-button[data-color="#00ff00"] {
+  background-image: url(/img/style-studio-2.JPG);
+  background-size: cover;
+
 }
