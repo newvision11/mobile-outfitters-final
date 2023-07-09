@@ -20,8 +20,6 @@
   src: url("/fonts/RilenoSans-SemiBold.ttf");
 
 }**/
-
-
 @font-face {
   font-family: 'Rileno Sans';
   src: url(./font-rileno/RilenoSans-Bold.woff);
@@ -30,13 +28,6 @@
 
 }
 
-@font-face {
-  font-family: 'Rileno Sans';
-  src: url(./font-rileno/RilenoSans-ExtraBold.woff);
-  font-weight: normal;
-  font-style: normal;
-
-}
 
 @font-face {
   font-family: 'Rileno Sans';
@@ -45,6 +36,8 @@
   font-style: normal;
 
 }
+
+
 
 @font-face {
   font-family: 'Rileno Sans';
@@ -57,7 +50,7 @@
 @font-face {
   font-family: 'Rileno Sans';
   src: url(/font-rileno/RilenoSans-Regular.woff);
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
 
 }
@@ -65,11 +58,18 @@
 @font-face {
   font-family: 'Rileno Sans';
   src: url(/font-rileno/RilenoSans-SemiBold.woff);
-  font-weight: normal;
+  font-weight: 900;
   font-style: normal;
 
 }
 
+@font-face {
+  font-family: 'Rileno Sans';
+  src: url(/font-rileno/RilenoSans-Light.woff);
+  font-weight: 300;
+  font-style: normal;
+
+}
 
 
 * {
@@ -399,6 +399,8 @@ body {
 
 .landing-text p {
   font-size: 15px;
+  font-weight: 200;
+  padding-top: 20px;
 }
 
 .landing-text .text-1 img {
@@ -890,6 +892,8 @@ footer .content .link-boxes .box-gg {
   font-size: 16px;
   font-weight: bolder;
   position: relative;
+  margin-bottom: 10px;
+
 }
 
 .link-boxes .box .link_name::before {
@@ -904,6 +908,8 @@ footer .content .link-boxes .box-gg {
 
 .content .link-boxes .box-gg li {
   list-style: none;
+  margin: 6px 0;
+
 }
 
 .content .link-boxes .box-gg li a {
@@ -1050,7 +1056,6 @@ footer .bottom-details .bottom_text {
     width: 100%;
   }
 }
-
 .location {
   margin-right: 20%;
   padding: 20px;
@@ -1237,4 +1242,49 @@ h2 {
 .last-icons img{
   height: 80px;
   width: auto;
+}
+
+.follow-us {
+  font-weight: normal;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+  margin-bottom: 80px;
+}
+
+
+.follow-us button {
+
+  line-height: 1.5;
+  font-weight: normal;
+  text-align: center;
+  display: inline-block;
+  zoom: 1;
+  padding: 15px 14px;
+  margin: 5px auto 0 auto;
+  border: none;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 1.5;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: #408bd1;
+  color: #fff;
+  transition: all .1s ease-in;
+  cursor: pointer;
+}
+
+.follow-us button:hover {
+  background: #489dec;
+}
+
+
+
+@media (max-width:800px) {
+  body .follow-us {
+    transform: scale(0.8);
+    margin-top: 0;
+    padding-top: 0;
+  }
+
 }

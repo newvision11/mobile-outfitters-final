@@ -676,7 +676,6 @@ body {
 
   body .about-text {
     width: 95%;
-    margin-left: 10px;
   }
 
   body .about-us img {
@@ -700,34 +699,27 @@ body {
 }
 
 .about-us {
-  gap: 50px;
+  margin-inline: auto;
   margin-top: 100px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
+  
 }
 .about-text{
   width: 80%;
+  margin-inline: auto;
+
 }
 
 
-.about-text h3 {
-  font-size: 20px;
-  letter-spacing: 2px;
-  color: #03b2e2;
-  font-weight: 600;
-}
 
 .about-text h1 {
   font-size: 58px;
-  margin-top: 5px;
+  padding-bottom: 12px;
 }
 
 .about-text h2 {
   font-weight: 600;
   font-style: italic;
   color: #6b6a75;
-  margin-top: 15px;
 }
 
 .about-text p {
@@ -735,7 +727,6 @@ body {
   color: #6b6a75;
   word-spacing: 1px;
   line-height: 27px;
-  margin-top: 25px;
   font-weight: 100;
 }
 
@@ -1720,7 +1711,7 @@ body {
   margin-inline: auto;
   margin-top: 100px;
   transform: scale(1);
-
+  padding: 15px;
 }
 
 .locations-text h4 {
@@ -1748,7 +1739,7 @@ body {
   background-color: #03b2e2;
   height: 3px;
   width: 30%;
-  margin: 5px 0;
+  margin: 17px 0;
   font-size: 9px;
   margin-inline: auto;
 }
@@ -1966,7 +1957,7 @@ input[type="submit"]:hover {
   font-size: 16px;
   line-height: 1.3rem;
   color: black;
-  font-weight: 500;
+  font-weight: 200;
   width: 80%;
   margin-inline: auto;
   text-align: center;
@@ -2016,6 +2007,7 @@ input[type="submit"]:hover {
   font-size: 16px;
   line-height: 1.3rem;
   color: black;
+  font-weight: 200;
 
 }
 
@@ -2162,6 +2154,8 @@ input[type="submit"]:hover {
 .offre h1{
   font-size: 42px;
   font-weight: bolder;
+  font-weight: 800;
+
 }
 
 

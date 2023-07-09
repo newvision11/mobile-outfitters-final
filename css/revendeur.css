@@ -20,8 +20,6 @@
   src: url("/fonts/RilenoSans-SemiBold.ttf");
 
 }**/
-
-
 @font-face {
   font-family: 'Rileno Sans';
   src: url(./font-rileno/RilenoSans-Bold.woff);
@@ -30,13 +28,6 @@
 
 }
 
-@font-face {
-  font-family: 'Rileno Sans';
-  src: url(./font-rileno/RilenoSans-ExtraBold.woff);
-  font-weight: normal;
-  font-style: normal;
-
-}
 
 @font-face {
   font-family: 'Rileno Sans';
@@ -45,6 +36,8 @@
   font-style: normal;
 
 }
+
+
 
 @font-face {
   font-family: 'Rileno Sans';
@@ -57,7 +50,7 @@
 @font-face {
   font-family: 'Rileno Sans';
   src: url(/font-rileno/RilenoSans-Regular.woff);
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
 
 }
@@ -65,7 +58,15 @@
 @font-face {
   font-family: 'Rileno Sans';
   src: url(/font-rileno/RilenoSans-SemiBold.woff);
-  font-weight: normal;
+  font-weight: 900;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'Rileno Sans';
+  src: url(/font-rileno/RilenoSans-Light.woff);
+  font-weight: 300;
   font-style: normal;
 
 }
@@ -361,7 +362,6 @@
   width: auto;
 }
 
-
 footer {
   background: #f2f2f2;
   width: 100%;
@@ -458,6 +458,8 @@ footer .content .link-boxes .box-gg {
   font-size: 16px;
   font-weight: bolder;
   position: relative;
+  margin-bottom: 10px;
+
 }
 
 .link-boxes .box .link_name::before {
@@ -472,6 +474,8 @@ footer .content .link-boxes .box-gg {
 
 .content .link-boxes .box-gg li {
   list-style: none;
+  margin: 6px 0;
+
 }
 
 .content .link-boxes .box-gg li a {
@@ -618,44 +622,6 @@ footer .bottom-details .bottom_text {
     width: 100%;
   }
 }
-
-.location {
-  margin-right: 20%;
-  padding: 20px;
-  border-bottom: 1px solid #707070;
-  cursor: pointer;
-  background: #fff;
-  color: #000;
-  transition: all .3s ease;
-}
-
-.location .title {
-  display: block;
-  font-size: 1.25em;
-  line-height: 1.1;
-}
-
-.location .desc {
-  color: #02b3e3;
-  font-family: "rileno_sans_boldbold";
-  margin-bottom: 10px;
-  display: block;
-}
-
-.location .address {
-  line-height: 1.7;
-  margin: 0;
-}
-
-.location a.bottom_link {
-  color: #000;
-  border-bottom: 2px solid #000;
-  text-decoration: none;
-}
-
-
-
-
 
 
 
