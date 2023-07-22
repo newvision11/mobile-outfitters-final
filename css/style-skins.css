@@ -1425,7 +1425,11 @@ h2 {
   background-size: cover;
 
 }
+.color-button[data-color="#d3d3d55"] {
+  background-image: url(/img/btnlast2.png);
+  background-size: cover;
 
+}
 .color-button[data-color="#ebd0cb"] {
   background-size: cover;
   background-image: url(/img/style-studio-6.JPG);
@@ -1452,11 +1456,7 @@ h2 {
 
 }
 
-.color-button[data-color="#d3d3d55"] {
-  background-image: url(/img/btnlast2.png);
-  background-size: cover;
 
-}
 
 .color-button[data-color="#d3d3d66"] {
   background-image: url(/img/btnlast.png);
