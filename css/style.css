@@ -2585,37 +2585,37 @@ footer .content .top {
   margin: 0 8px;
   border-radius: 50%;
   text-align: center;
-  line-height: 40px;
-  color: #fff;
-  font-size: 17px;
+  line-height: 37px;
+  color: #000000;
+  font-size: 18px;
   text-decoration: none;
   transition: all 0.4s ease;
 }
 
 .top .media-icons a:nth-child(1) {
-  background: #0077B5;
+  border: 2px solid #000000;
 }
 
 
 .top .media-icons a:nth-child(2) {
-  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf-Jdo6l_tLxIWVHs3mUGOHtV3ApSFVqKBt93YGPmY&s);
+  border: 2px solid #000000;
   background-position: center;
 
 }
 
 
 .top .media-icons a:nth-child(3) {
-  background: #000000;
+  border: 2px solid #000000;
 }
 
 
 .top .media-icons a:nth-child(4) {
-  background: #0077B5;
+  border: 2px solid #000000;
 }
 
 
 .top .media-icons a:nth-child(5) {
-  background: #FF0000;
+  border: 2px solid #000000;
 }
 
 
@@ -2633,7 +2633,7 @@ footer .content .link-boxes .box-gg {
 .content .link-boxes .box-gg .link_name {
   color: #000000;
   font-size: 16px;
-  font-weight: 800;
+  font-weight: bolder;
   position: relative;
   margin-bottom: 10px;
 
@@ -2656,10 +2656,11 @@ footer .content .link-boxes .box-gg {
 }
 
 .content .link-boxes .box-gg li a {
-  color: #656565;
-  font-size: .9em;
-    font-weight: 400;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 400;
   text-decoration: none;
+  opacity: 0.8;
   transition: all 0.4s ease
 }
 

@@ -846,37 +846,37 @@ footer .content .top {
   margin: 0 8px;
   border-radius: 50%;
   text-align: center;
-  line-height: 40px;
-  color: #fff;
-  font-size: 17px;
+  line-height: 37px;
+  color: #000000;
+  font-size: 18px;
   text-decoration: none;
   transition: all 0.4s ease;
 }
 
 .top .media-icons a:nth-child(1) {
-  background: #0077B5;
+  border: 2px solid #000000;
 }
 
 
 .top .media-icons a:nth-child(2) {
-  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf-Jdo6l_tLxIWVHs3mUGOHtV3ApSFVqKBt93YGPmY&s);
+  border: 2px solid #000000;
   background-position: center;
 
 }
 
 
 .top .media-icons a:nth-child(3) {
-  background: #000000;
+  border: 2px solid #000000;
 }
 
 
 .top .media-icons a:nth-child(4) {
-  background: #0077B5;
+  border: 2px solid #000000;
 }
 
 
 .top .media-icons a:nth-child(5) {
-  background: #FF0000;
+  border: 2px solid #000000;
 }
 
 
@@ -1350,9 +1350,7 @@ h2 {
 .color-buttons {
   margin-top: 10px;
   text-align: center;
-  display: grid;
-  width: 50%;
-  grid-template-columns: repeat(11, 1fr);
+  width: 70%;
   margin-inline: auto;
 }
 
@@ -1367,7 +1365,7 @@ h2 {
 .color-button {
   height: 40px;
   width: 40px;
-  margin: 0 5px;
+  margin: 10px 5px;
   border: none;
   border-radius: 50%;
   cursor: pointer;
@@ -1462,4 +1460,14 @@ h2 {
   background-image: url(/img/btnlast.png);
   background-size: cover;
 
+}
+
+.color-buttons{
+  display: flex;
+  
+}
+
+
+.color-buttons  h3 {
+  padding: 10px ;
 }

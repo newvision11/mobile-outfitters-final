@@ -403,37 +403,40 @@ footer .content .top {
   margin: 0 8px;
   border-radius: 50%;
   text-align: center;
-  line-height: 40px;
-  color: #fff;
-  font-size: 17px;
+  line-height: 37px;
+  color: #000000;
+  font-size: 18px;
   text-decoration: none;
   transition: all 0.4s ease;
 }
 
 .top .media-icons a:nth-child(1) {
-  background: #0077B5;
+  border: 2px solid #000000;
 }
 
 
 .top .media-icons a:nth-child(2) {
-  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf-Jdo6l_tLxIWVHs3mUGOHtV3ApSFVqKBt93YGPmY&s);
+  border: 2px solid #000000;
   background-position: center;
+
 }
 
 
 .top .media-icons a:nth-child(3) {
-  background: #000000;
+  border: 2px solid #000000;
 }
 
 
 .top .media-icons a:nth-child(4) {
-  background: #0077B5;
+  border: 2px solid #000000;
 }
 
 
 .top .media-icons a:nth-child(5) {
-  background: #FF0000;
+  border: 2px solid #000000;
 }
+
+
 
 footer .content .link-boxes {
   width: 100%;
@@ -613,50 +616,6 @@ footer .bottom-details .bottom_text {
   footer .content .link-boxes .input-box {
     width: 100%;
   }
-}
-#map_canvas {
-  height: 500px;
-  width: 800px;
-  margin-inline: auto;
-  margin-top: 100px;
-}
-
-/* If you don't want the footer to be responsive, remove these media queries */
-
-@media (max-width: 880px) {
-  #map_canvas {
-    height: 400px;
-    width: 90%;
-    margin-top: 50px;
-  }
-
-  .footer-distributed {
-    font: bold 14px sans-serif;
-  }
-
-  .footer-distributed .footer-left,
-  .footer-distributed .footer-center,
-  .footer-distributed .footer-right {
-    display: block;
-    width: 100%;
-    margin-bottom: 40px;
-    text-align: center;
-  }
-
-  .footer-distributed .footer-center i {
-    margin-left: 0;
-    font-size: 17px;
-  }
-
-  body .email-push {
-    margin-right: 0px;
-  }
-
-  body .phone-push {
-    margin-left: 15px;
-
-  }
-
 }
 
 
