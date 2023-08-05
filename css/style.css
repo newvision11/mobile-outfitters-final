@@ -2799,6 +2799,30 @@ footer .bottom-details .bottom_text {
     width: 100%;
   }
 }
+/* CSS for the WhatsApp widget */
+#whatsapp-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+#whatsapp-widget img {
+  width: 60px;
+  height: 60px;
+}
+/* Responsive CSS for WhatsApp widget */
+@media (max-width: 768px) {
+  #whatsapp-widget {
+      bottom: 10px;
+      right: 10px;
+  }
+
+  #whatsapp-widget img {
+      width: 50px;
+      height: 50px;
+  }
+}
 
 .location {
   margin-right: 20%;
